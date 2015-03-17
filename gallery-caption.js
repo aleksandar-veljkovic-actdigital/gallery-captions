@@ -48,7 +48,7 @@
         $items.css({opacity: 0, zIndex: -1}).removeClass("active");
         $active.css({opacity: 1, zIndex: 1}).addClass("active");
       }
-      if (set.autoHeight) {
+      if (set.autoHeight && typeof($active)!=='undefined') {
         var h = $active.outerHeight(true);
         $this.css('height', h);
       }
